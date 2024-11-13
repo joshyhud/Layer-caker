@@ -1,5 +1,6 @@
 import "@/app/globals.css";
-import { SanityLive } from "@/sanity/lib/live";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 export default function RootLayout({
   children,
@@ -7,9 +8,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      {children}
-      <SanityLive />
-    </>
+    <html lang="en">
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
+    </html>
   );
 }
